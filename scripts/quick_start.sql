@@ -109,3 +109,15 @@ db.accounts.replaceOne(
   { account_id: 371138 },
   { account_id: 893421, limit: 5000, products: [ "Investment", "Brokerage" ] }
 );
+
+---------------------------------------------
+-- Delete all documents
+--------------------------------------------
+db.movies.deleteMany({});
+db.movies.drop(); -- If you want to delete all documents from a large collection,may have faster performance than deleting documents with the db.collection.deleteMany() method.
+
+---------------------------------------------
+-- Delete all documents that Match a Condition
+----------------------------------------------
+db.movies.deleteMany( { title: "Titanic" } );
+db.movies.deleteOne( { cast: "Brad Pitt" } ); -- Delete Only One Document that Matches a Condition
