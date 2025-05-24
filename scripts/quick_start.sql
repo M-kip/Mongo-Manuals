@@ -1,4 +1,4 @@
-use sample_mflix
+use (sample_mflix)
 
 db.movies.insertOne(
   {
